@@ -1,0 +1,79 @@
+<!-- doge -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <title>Users</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.form').submit(function () {
+                    // alert('Hi!!')
+                    return false
+                });
+                $('#submit').click(function(){
+                    console.log("hello");
+                    $('table').append("<tr><th class='fnamet'></th> <th class='lnamet'></th> <th class='mailt'></th> <th class='numbert'></th></tr>")});
+
+                // $('.info').click(function () {
+                //     $(this).attr('value','')
+                // });
+                // $('input').on("blur", function () {
+                //     var temp = $(this).val();
+                //     $('li').append(temp);
+                //     console.log($(this).serialize());
+                // })
+                $('#submit').click(function () {
+                    var fname = $('.fname').val();
+                    console.log(fname);
+                    $('.fnamet').append(fname)
+                })
+                $('#submit').click(function () {
+                    var lname = $('.lname').val();
+                    console.log(lname);
+                    $('.lnamet').append(lname)
+                })
+                $('#submit').click(function () {
+                    var mail = $('.email').val();
+                    $('.mailt').append(mail)
+                    console.log(mail);
+                })
+                $('#submit').click(function () {
+                    var number = $('.number').val();
+                    $('.numbert').append(number)
+                    console.log(number);
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <div class="infomenu">
+                <table>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email Address</th>
+                        <th>Contact #</th>
+                    </tr>
+                </table>
+            </div>
+            <h1>Add User</h1>
+            <hr>
+            <form class="form" action="index.html" method="post">
+                First Name: <input class="fname" type="text" name="firstname" value="Eduardo">
+                <br>
+                Last Name: <input class="lname" type="text" name="lastname" value="Melean">
+                <br>
+                Email Address: <input class="email" type="text" name="email" value="silverk@gmail.com">
+                <br>
+                Contact No.: <input class="number" type="text" name="phone" value="3055421979">
+                <br>
+                <input id="submit" type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+
+    </body>
+</html>
